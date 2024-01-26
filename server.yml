@@ -4,7 +4,8 @@
   gather_facts: yes
   name: install and configure server
   roles:
-    - devsec.hardening.os_hardening
+    # os_hardening
+    - { role: os_hardening, become: True, tags: os_hardening }
   vars:
     sysctl_overwrite:
       # Enable IPv4 traffic forwarding.
