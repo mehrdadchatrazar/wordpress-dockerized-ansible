@@ -1,0 +1,7 @@
+all:
+  children:
+    servers:
+      hosts:
+        server:
+          ansible_host: 5.34.203.166
+          ansible_user: ubuntu
