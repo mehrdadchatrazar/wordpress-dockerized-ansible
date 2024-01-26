@@ -7,5 +7,5 @@
 ## Running the Ansible Playbook
 
 ```bash
-ansible-playbook server.yaml -i inventory
+ansible-playbook server.yml -i inventory
 ```
