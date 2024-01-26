@@ -9,5 +9,4 @@
     name: docker-compose-plugin
     state: latest
     update_cache: yes
-  # environment: "{{ proxy_env }}"
   tags: inatall_compose

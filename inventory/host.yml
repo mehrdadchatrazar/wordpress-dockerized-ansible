@@ -3,5 +3,5 @@ all:
     servers:
       hosts:
         server:
-          ansible_host: 5.34.203.166
+          ansible_host: 5.34.202.55
           ansible_user: ubuntu

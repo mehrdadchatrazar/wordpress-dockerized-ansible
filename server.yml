@@ -5,11 +5,15 @@
   name: install and configure server
   roles:
     # os_hardening
-    - { role: os_hardening, become: True, tags: os_hardening }
+    # - { role: os_hardening, become: True, tags: os_hardening }
     # add firewall rules
-    - { role: firewall, become: True, tags: firewall }
+    # - { role: firewall, become: True, tags: firewall }
     # install and configure docker
     - { role: docker, become: True, tags: docker }
+    # private registry
+    - { role: registry, become: True, tags: registry }
+    # deploy wordpress using docker compose
+    - { role: wordpress, become: True, tags: wordpress }
   vars:
     sysctl_overwrite:
       # Enable IPv4 traffic forwarding.
