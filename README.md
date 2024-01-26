@@ -6,8 +6,6 @@
 
 ## Running the Ansible Playbook
 
-To execute the Ansible playbook, use the following command:
-
 ```bash
 ansible-playbook server.yaml -i inventory
 ```
