@@ -7,9 +7,9 @@
     # os_hardening
     - { role: os_hardening, become: True, tags: os_hardening }
     # add firewall rules
-    - { role: firewall, become: True, tags: firewall}
+    - { role: firewall, become: True, tags: firewall }
     # install and configure docker
-    - { role: docker, become: True, tags: docker}
+    - { role: docker, become: True, tags: docker }
   vars:
     sysctl_overwrite:
       # Enable IPv4 traffic forwarding.
