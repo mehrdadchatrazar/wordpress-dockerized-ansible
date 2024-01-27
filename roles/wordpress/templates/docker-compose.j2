@@ -34,7 +34,7 @@ services:
     volumes:
       - wp_data:/var/www/html/
     depends_on:
-      - mariadb
+      - mysql
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - WORDPRESS_DATABASE_HOST=mysql

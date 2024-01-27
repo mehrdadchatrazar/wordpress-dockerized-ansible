@@ -29,12 +29,3 @@
   file:
     path: /var/lib/docker
     state: absent
-
-- name: check nginx config
-  command: docker exec nginx nginx -t
-
-- name: reload nginx container
-  command: docker kill -s HUP nginx
-
-- name: restart registry container
-  command: docker restart registry

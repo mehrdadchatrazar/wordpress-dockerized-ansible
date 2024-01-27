@@ -9,4 +9,4 @@
     name: docker-compose-plugin
     state: latest
     update_cache: yes
-  tags: inatall_compose
+  tags: install_compose

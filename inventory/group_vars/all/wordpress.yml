@@ -1,5 +1,5 @@
 ---
-system_user: ubuntu
+system_user: vagrant
 compose_project_dir: /home/{{ system_user }}/compose-wordpress
 
 wp_version: 4.7.5
