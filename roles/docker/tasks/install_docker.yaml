@@ -30,7 +30,7 @@
     update_cache: yes
   loop:
     - docker-ce
-    - docker-ce-clix
+    - docker-ce-cli
     - containerd.io
     - docker-compose-plugin
 
