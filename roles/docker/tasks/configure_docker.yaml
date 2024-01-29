@@ -1,5 +1,5 @@
 ---
-- name: docker | Manual - create directories
+- name: Create a systemd drop-in directory for the docker service
   file:
     dest=/etc/systemd/system/docker.service.d/
     recurse=yes
