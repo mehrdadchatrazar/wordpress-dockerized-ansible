@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-1. Make sure vagrant is installed(not required if you want to use some other server).
+1. Make sure Vagrant is installed(not required if you want to use some other server).
 2. Make sure Ansible is installed.
 
 ## Start virtual machine
