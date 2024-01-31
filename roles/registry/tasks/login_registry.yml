@@ -1,0 +1,33 @@
+---
+- name: Install pip
+  ansible.builtin.apt:
+    pkg:
+      - python3-pip
+
+- name: Install passlib
+  ansible.builtin.pip:
+    name: passlib
+
+- name: Create auth directory
+  file:
+    path: "./docker-registry/auth"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Add user to registry
+  community.general.htpasswd:
+    path: "./docker-registry/auth/registry.password"
+    name: mehrdad
+    password: 'hellohello'
+    hash_scheme: bcrypt
+    owner: root
+    group: root
+    mode: 0640
+
+- name: Log into private registry
+  docker_login:
+    registry: 127.0.0.1:5000
+    username: mehrdad
+    password: hellohello

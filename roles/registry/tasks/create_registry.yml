@@ -1,0 +1,37 @@
+---
+- name: Create registry directory
+  file:
+    path: ./docker-registry/data
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Create nginx directory
+  file:
+    path: ./docker-registry/nginx/conf.d
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Copy registry and nginx compose file
+  template:
+    src: docker-compose.yml.j2
+    dest: "./docker-registry/docker-compose.yml"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Copy nginx config file
+  template:
+    src: app.conf.j2
+    dest: "./docker-registry/nginx/conf.d/app.conf"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Docker Compose up
+  ansible.builtin.shell: docker compose up -d
+  args:
+    chdir: ./docker-registry/
