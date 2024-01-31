@@ -3,7 +3,7 @@ version: '3'
 networks:
   web:
     external: true
-  app:
+    name: docker-registry_web
 
 volumes:
   mysql_data:
@@ -15,7 +15,7 @@ services:
     container_name: mysql
     restart: unless-stopped
     networks:
-      - app
+      - web
     volumes:
       - mysql_data:/var/lib/mysql
     environment:
@@ -30,7 +30,6 @@ services:
     restart: unless-stopped
     networks:
       - web
-      - app
     volumes:
       - wp_data:/var/www/html/
     depends_on:
